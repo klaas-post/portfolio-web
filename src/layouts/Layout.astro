@@ -55,9 +55,27 @@ const { title } = Astro.props;
 		margin-bottom: 0.25rem
 	}
 
+	p, small, strong, em {
+		margin-top: 0.2rem;
+		margin-bottom: 0.2rem;
+	}
+
+	a {
+		color: var(--color)
+	}
+
+	a:hover {
+		text-shadow: 0 0 10px #e5ffa79c;
+	}
+
+	li {
+		list-style-type: '> ';
+	}
+
 
 	body {
-		max-width: 60rem;
+		max-width: 50rem;
+		padding-bottom: 5rem;
 	}
 
 	hr {
@@ -67,7 +85,7 @@ const { title } = Astro.props;
 	}
 
 	section {
-		margin-bottom: 4rem;
+		margin-bottom: 2rem;
 	}
 
 	code {
