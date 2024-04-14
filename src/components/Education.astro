@@ -1,0 +1,15 @@
+---
+const {school, location, course} = Astro.props as Education
+---
+
+<div class="education">
+    <h4>{school}</h4>
+    <p>{course}</p>
+    <small>{location}</small>
+</div>
+
+<style scoped>
+    .education{
+        padding-bottom: 1rem;
+    }
+</style>

@@ -1,10 +1,18 @@
 ---
-
+import Education from "./Education.astro"
+const Educations: Education[] = [
+    {school: "Windesheim", location: "Zwolle", course: "Bachelor of Science - HBO-ICT Software Engineer"},
+    {school: "Emelwerda", location: "Emmeloord", course: "Natuur en Techniek"}
+]
 ---
 
 <section>
     <h3>EDUCATION</h3>
     <hr>
-    <h4>Emelwerda College</h4>
-    <h4>Windesheim</h4>
+    <div>
+        {Educations.map((education) => (
+            <Education school={education.school} location={education.location} course={education.course}/>
+        ))}
+    </div>
 </section>
+

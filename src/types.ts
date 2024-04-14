@@ -9,3 +9,9 @@ type Experience = {
     type: string;
 
 }
+
+type Education = {
+    school: string;
+    location: string;
+    course: string;
+}

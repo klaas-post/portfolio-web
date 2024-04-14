@@ -2,10 +2,16 @@
 const { name, progress } = Astro.props as Skill;
 ---
 
-<h4>{ name }</h4>
-<progress value={progress} max="100"></progress>
+<div class="skill">
+    <h4>{ name }</h4>
+    <progress value={progress} max="100"></progress>
+</div>
 
 <style scoped>
+    .skill{
+        margin-bottom: 1rem;
+    }
+
     progress {
     display: inline-block;
     vertical-align: baseline;
