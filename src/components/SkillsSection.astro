@@ -18,16 +18,9 @@ const skills: Skill[] = [
 <section>
     <h3>SKILLS</h3>
     <hr>
-    <div class="skill-list">
+    <div>
         {skills.map((skill) => (
             <Skill name={skill.name} progress={skill.progress}/>
         ))}
     </div>
 </section>
-
-<style scoped>
-    .skill-list{
-        display: grid;
-        max-width: 50rem;
-    }
-</style>
