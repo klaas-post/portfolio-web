@@ -12,7 +12,6 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Klaas Post Resume, Klaas Post Portfolio, Klaas Post Github, Klaas Post CV" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -21,27 +20,56 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 	:root {
 		--background-color: #13151a;
-		--primary-gradient: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
-		--color: white;
-	}
-
-	[data-theme="light"]
-	:root {
-		--background-color: white;
-		--color: black;
+		--color: #e5ffa7;
+		--border-style: dashed;
+		--border-width: 2px;
+		--border-color: var(--color);
+		--font-family: 
+			Monaco,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
 	}
 
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: var(--font-family);
 		color: var(--color);
 		background: var(--background-color);
 		background-size: 224px;
+		justify-content: center;
+		display: flex;
 	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 0.25rem;
+		margin-bottom: 0.25rem
+	}
+
+
+	body {
+		max-width: 60rem;
+	}
+
+	hr {
+		border-color: var(--color);
+		border-style: var(--border-style);
+		margin-bottom: 1rem;
+	}
+
 	section {
 		margin-bottom: 4rem;
 	}
+
 	code {
 		font-family:
 			Menlo,
