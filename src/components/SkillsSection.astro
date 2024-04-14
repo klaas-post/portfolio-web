@@ -1,7 +1,33 @@
 ---
+import Skill from "./Skill.astro";
 
+const skills: Skill[] = [
+    { name: ".NET", progress: 78 },
+    { name: "JavaScript", progress: 60 },
+    { name: "TypeScript", progress: 70 },
+    { name: "React", progress: 65 },
+    { name: "Svelte", progress: 57 },
+    { name: "Swift", progress: 45 },
+    { name: "Python", progress: 76 },
+    { name: "Azure", progress: 70 },
+    { name: "AWS", progress: 45 },
+    { name: "Firebase", progress: 80 }
+]
 ---
 
 <section>
-    
+    <h3>SKILLS</h3>
+    <hr>
+    <div class="skill-list">
+        {skills.map((skill) => (
+            <Skill name={skill.name} progress={skill.progress}/>
+        ))}
+    </div>
 </section>
+
+<style scoped>
+    .skill-list{
+        display: grid;
+        max-width: 50rem;
+    }
+</style>

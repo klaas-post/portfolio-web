@@ -1,0 +1,14 @@
+---
+const { title, place, type } = Astro.props as Experience;
+---
+
+<div class="experience">
+    <h4>{title}</h4>
+    <p>{place} • {type}</p>
+</div>
+
+<style scoped>
+    .experience{
+        padding-bottom: 1rem;
+    }
+</style>

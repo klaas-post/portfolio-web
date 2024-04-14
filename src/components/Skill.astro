@@ -1,0 +1,35 @@
+---
+const { name, progress } = Astro.props as Skill;
+---
+
+<h4>{ name }</h4>
+<progress value={progress} max="100"></progress>
+
+<style scoped>
+    progress {
+    display: inline-block;
+    vertical-align: baseline;
+    }
+
+    progress {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    appearance: none;
+    width: 100%;
+    height: 0.5rem;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0.25rem;
+    background-color: white;
+    }
+    progress[value]::-webkit-progress-value {
+    background-image: var(--primary-gradient);
+    -webkit-transition: inline-size 0.2 ease-in-out;
+    transition: inline-size 0.2 ease-in-out;
+    }
+    progress::-moz-progress-bar {
+    background-image: var(--primary-gradient);
+    }
+
+</style>

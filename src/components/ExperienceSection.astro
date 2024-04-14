@@ -1,7 +1,28 @@
 ---
+import Experience from "./Experience.astro"
 
+const experiences: Experience[] = [
+    { title: "Software Engineer", place: "SpringTree B.V.", type: "Intern"},
+    { title: "Software Engineer", place: "Van Brug Software", type: "Intern"},
+    { title: "Data Engineer", place: "Municipality of Zwolle", type: "Intern"},
+    { title: "App Developer", place: "Blindsight Mobility", type: "Intern"},
+    { title: "Worker", place: "Visscher Seafood", type: "Parttime"},
+    
+];
 ---
 
 <section>
-    
+    <h3>EXPERIENCE</h3>
+    <hr>
+    <div class="experience-list">
+        {experiences.map((experience) => (
+            <Experience title={experience.title} place={experience.place} type={experience.type} />
+        ))}
+    </div>
 </section>
+
+<style scoped>
+    .experience-list{
+        display: grid;
+    }
+</style>
