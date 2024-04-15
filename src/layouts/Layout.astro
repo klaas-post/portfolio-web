@@ -43,6 +43,7 @@ const { title } = Astro.props;
 		background-size: 224px;
 		justify-content: center;
 		display: flex;
+		font-size: calc(15px + 0.390625vw);
 	}
 
 	h1,
@@ -89,14 +90,6 @@ const { title } = Astro.props;
 	}
 
 	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+		font-family: var(--font-family)
 	}
 </style>
