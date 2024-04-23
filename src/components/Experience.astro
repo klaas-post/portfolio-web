@@ -1,16 +1,10 @@
 ---
-const { title, place, type } = Astro.props as Experience;
+const { title, place, type, start, end } = Astro.props as Experience;
+const options = { year: 'numeric', month: 'short', } as Intl.DateTimeFormatOptions;
 ---
 
-<div class="experience">
+<section>
     <h4>{title}</h4>
-    <p>{place} • {type}</p>
-</div>
-
-<style scoped>
-    .experience{
-        padding-left: 1rem;
-        margin-bottom: 1.25rem;
-        border-left: var(--color) var(--border-width) var(--border-style);
-    }
-</style>
+    <p>{place} - {type}</p>
+    <small>{start.toLocaleDateString("en-US", options)} - {end.toLocaleDateString("en-US", options)}</small>
+</section>
