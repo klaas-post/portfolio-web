@@ -2,26 +2,18 @@
 import Experience from "./Experience.astro"
 
 const experiences: Experience[] = [
-    { title: "Software Engineer", place: "SpringTree B.V.", type: "Intern", start: "Mar. 2023", end: "Sep. 2023"},
-    { title: "Software Engineer", place: "Van Brug Software", type: "Intern", start: "Sep. 2022", end: "Feb. 2023"},
-    { title: "Data Engineer", place: "Municipality of Zwolle", type: "Intern", start: "Apr. 2022", end: "Jun. 2022"},
-    { title: "App Developer", place: "Blindsight Mobility", type: "Intern", start: "Sep. 2021", end: "Feb. 2022"},
-    { title: "Worker", place: "Visscher Seafood", type: "Parttime", start: "Aug. 2015", end: "Okt. 2019"},
+    { title: "Software Engineer", place: "SpringTree B.V.", type: "Intern", start: new Date(2023, 3), end: new Date(2023, 9)},
+    { title: "Software Engineer", place: "Van Brug Software", type: "Intern", start: new Date(2022, 9), end: new Date(2023, 2)},
+    { title: "Data Engineer", place: "Municipality of Zwolle", type: "Intern", start: new Date(2022, 4), end: new Date(2022, 6)},
+    { title: "App Developer", place: "Blindsight Mobility", type: "Intern", start: new Date(2021, 9), end: new Date(2022, 2)},
+    { title: "Worker", place: "Visscher Seafood", type: "Parttime", start: new Date(2015, 8), end: new Date(2019, 10)},
 ];
 ---
 
 <section>
     <h3>EXPERIENCE</h3>
     <hr>
-    <div class="experience-list">
-        {experiences.map((experience) => (
-            <Experience title={experience.title} place={experience.place} type={experience.type} start={experience.start} end={experience.end} />
-        ))}
-    </div>
+    {experiences.map((experience) => (
+        <Experience title={experience.title} place={experience.place} type={experience.type} start={experience.start} end={experience.end} />
+    ))}
 </section>
-
-<style scoped>
-    .experience-list{
-        display: grid;
-    }
-</style>

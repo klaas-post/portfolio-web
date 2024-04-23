@@ -7,14 +7,14 @@ type Experience = {
     title: string;
     place: string;
     type: string;
-    start: string;
-    end: string;
+    start: Date;
+    end: Date;
 }
 
 type Education = {
     school: string;
     location: string;
     course: string;
-    start: string;
-    end: string;
+    start: Date;
+    end: Date;
 }

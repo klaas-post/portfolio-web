@@ -1,17 +1,10 @@
 ---
 const {school, location, course, start, end} = Astro.props as Education
+const options = { year: 'numeric', month: 'short', } as Intl.DateTimeFormatOptions;
 ---
 
-<div class="education">
+<section>
     <h4>{school} ({location})</h4>
     <p>{course}</p>
-    <small>{start} - {end}</small>
-</div>
-
-<style scoped>
-    .education{
-        padding-left: 1rem;
-        margin-bottom: 1.25rem;
-        border-left: var(--color) var(--border-width) var(--border-style);
-    }
-</style>
+    <small>{start.toLocaleDateString("en-US", options)} - {end.toLocaleDateString("en-US", options)}</small>
+</section>
