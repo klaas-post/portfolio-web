@@ -3,8 +3,8 @@ const { name, progress } = Astro.props as Skill;
 ---
 
 <div class="skill">
-    <h4>{ name }</h4>
-    <progress value={progress} max="100"></progress>
+    <label>{ name }</label>
+    <progress value={ progress } max="100" aria-label={ name }></progress>
 </div>
 
 <style scoped>
