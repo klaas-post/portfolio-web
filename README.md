@@ -53,8 +53,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## Status
 
-This project is a work in progress. Updates and improvements are regularly being made to enhance the content, design, and functionality of the resume. Feedback and contributions are welcome!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+This project is a work in progress and everything you see is subject to change.  
